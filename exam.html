@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="exam.css">
+</head>
+<body class="bg-success" style="background-color: rgb(20, 0, 39) !important; color: white; ">
+    <nav class="shadow-sm"  id="menuBar">
+        <span id="menu"  class="fa fa-align-justify shadow-sm text-white"></span>
+        <span id="menu1" class="fa fa-align-justify shadow-sm"></span>
+    </nav>
+
+    <div id="sidebar" class="shadow-sm">
+        <ul>
+                <li>
+                 <a href="#" id="homebtn">HOME</a>
+                    </li>
+             <li>
+                <a href="#" id="histbtn">HISTORY</a>
+            </li>
+            </ul>
+    </div>
+    <div class="container" id="homePage">
+       <div class="row">
+          <div class="col-md-12">
+              <div class="card mt-5">
+                  <div class="card-header text-center  text-white" style="background-color:  rgb(20, 0, 39) !important; border: none">
+                    <h4>  TIP CALCULATOR </h4>
+                  </div>
+             </div>
+              <div class="input-group mb-3 rounded mt-3"></div>
+              <label for="" class="mt-2">PLEASE ENTER THE BILL</label>
+
+              <div class="input-group-prepend mb-5"><span class="input-group-text">N</span>
+                <input type="text" name="" id="amt" class="form-control" placeholder="Enter the Amount">
+              </div>
+
+              <label for="" class="mt-2">WAS YOUR SERVICE GOOD ?</label>
+
+                  <select id="chooseTips" class="col-md-12 form-control ">
+                <option disabled selected value="0">Choose an Option</option>
+                <option value="0.3">30&#37; &#45; Awesome</option>
+                <option value="0.2">20&#37; &#45; It's good </option>
+                <option value="0.15">15&#37; &#45; I appreciate it</option>
+                <option value="0.1">10&#37; &#45; Bad</option>
+                <option value="0.05">5&#37; &#45; Terrible</option>
+                <option value="0.00">0&#37; &#45; very bad</option>
+            </select>
+
+            <div class="input-group mb-3 rounded mt-5"></div>
+            <label for="" class="mt-2">HOW MANY ARE SHARING THE BILL ?</label>
+
+            <div class="input-group-prepend mb-5"><span class="input-group-text fa fa-person-booth"></span>
+              <input type="text" name="" id="eachPersonAmt" class="form-control" placeholder="How mant People are sharing the bill">
+            </div>
+
+            <div class="input-group mb-3">
+            <button type="button" id="calculate" class="btn btn-secondary col-md-6">Calculate</button>
+               
+            </div>
+          </div>
+       </div>
+       <div class="row">
+           <div class="col-md-12">
+            <div id="eachTotal" class="col-md-6 text-white text-center" style="font-size: 20px; display: none;">
+                <h5 id="otherText">Amount Of</h5>
+                N<span id="sharedTip">0.00</span>K
+                <h3 id="onePerson">Each</h3>
+              </div>
+           </div>
+       </div>
+
+       <div class="row mr-5" id="histPage" style="display: none"> 
+        <div class="col-md-12">
+      <!-- <header class="masthead d-flex"> -->
+          
+    <div class="container text-center my-auto">
+    <h6 class="text-white mb-5 mt-3">COUNTER HISTORY  <span class="fa fa-trash ml-5" onclick="clearHistory()"></span></h6>
+    
+    <table class="table table-hover table-bordered" style="font-size: 10px;">
+    <thead>
+    <tr class="text-white">
+    <td >S/N</td>
+    <td>CATEGORIES</td>
+    <td>TIME STARTED</td>
+    <td>TIME ENDED</td>
+    <td>TOTAL</td>
+    </tr>
+    </thead>
+        <tbody id="tbody" style="color:#fff;">
+        </tbody>
+    </table>
+    <div class="input-group">
+          <h5 class="col-md-3 text-white">TIME ENDED</h5>	
+          <input type="text" class="col-md-6 form-control text-center" style="font-weight:bolder;" id="basicaddon1" readonly>
+    </div>
+    <div class="overlay"></div>
+    <!-- </header> -->
+            
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+<script src="jquery/jquery.min.js"></script>
+<script src="exam.js"></script>
+
+</html>
